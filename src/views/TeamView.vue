@@ -2,15 +2,19 @@
 import TeamFooter from '@/components/Teams/TeamFooter.vue';
 import TeamHeader from '@/components/Teams/TeamHeader.vue';
 import TeamMembers from '@/components/Teams/TeamMembers.vue';
-import team from '@/team.json';
+//import team from '@/team.json';
+import {useTeamStore} from "@/stores/TeamStore"
+
+let team = useTeamStore();
+team.fill();
 </script>
 
 <template>
-  <TeamHeader :team="team" />
+  <TeamHeader />
 
   <div class="place-self-center flex flex-col gap-y-3">
-    <TeamMembers :team="team" />
+    <TeamMembers />
   </div>
   
-  <TeamFooter :team="team" />
+  <TeamFooter />
 </template>
