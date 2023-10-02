@@ -2,8 +2,7 @@
 import TeamFooter from '@/components/Teams/TeamFooter.vue';
 import TeamHeader from '@/components/Teams/TeamHeader.vue';
 import TeamMembers from '@/components/Teams/TeamMembers.vue';
-//import team from '@/team.json';
-import {useTeamStore} from "@/stores/TeamStore"
+import {useTeamStore} from "@/stores/TeamStore";
 
 let team = useTeamStore();
 team.fill();
@@ -17,4 +16,5 @@ team.fill();
   </div>
   
   <TeamFooter />
+
 </template>
